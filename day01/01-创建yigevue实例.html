@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+    </div>
+    <!-- 引入的开发版本包 -包含了完整的注释和警告 -->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script> 
+   <script>
+    // 一旦引入了 VUE核心包，在全局环境下，就有了vue的构造函数
+    const app = new Vue({
+        // el配置选择器，指定Vue管理的是那个容器
+        el: '#app',
+        // 通过data提供渲染的数据
+        data: {
+            msg: '这是一个vue实例'
+        }
+    })
+   </script>
+</body>
+</html>

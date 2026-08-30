@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    插值表达式：Vue的一种模板语法
+    利用插值表达式进行数据渲染
+    语法：{{表达式}}
+    -->
+    <div id="app">
+        <p>{{nickname}}</p>
+        <p>{{nickname.toUpperCase()}}</p>
+        <p>{{nickname+'你好'}}</p>
+        <p>{{'我今年'+age+岁}}</p>
+        <p>{{age > 18 ? '成年人':'未成年'}}</p>
+        <p>{{friend.name}}</p>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            nickname: 'tony',
+            age: 22,
+            friend: {
+                name: 'mike',
+                age: 22
+            }
+        }
+    })
+</script>
+
+</html>

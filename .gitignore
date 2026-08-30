@@ -1,0 +1,8 @@
+# 所有子目录下的 node_modules 全部忽略
+**/node_modules/
+
+# 其他常见忽略
+**/dist/
+**/*.log
+**/.vscode/
+.DS_Store
