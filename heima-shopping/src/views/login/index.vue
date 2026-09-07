@@ -102,7 +102,9 @@ export default {
       const res = await codeLogin(this.mobile, this.msgCode)
       console.log(res)
       this.$store.commit('user/setUserInfo', res.data)
-      this.$router.push('/')
+      // 从商品详情页跳转来的
+      const url = this.$route.query.backUrl || '/'
+      this.$router.replace(url)
       this.$toast('登录成功')
     }
   },

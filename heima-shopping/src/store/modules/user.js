@@ -11,6 +11,12 @@ export default {
       state.userInfo = obj
       setInfo(obj)
     }
+  },
+  actions: {
+    logout (context) {
+      context.commit('setUserInfo', {})
+      context.commit('cart/setCartList', [], { root: true })
+    }
   }
 
 }
